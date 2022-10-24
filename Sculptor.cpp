@@ -11,17 +11,7 @@ Voxel*** alocaEspaco(int nc,int na, int nl){
     int i,j;
     Voxel ***aux;
     aux = new Voxel**[nl];
-    if(aux != 0){
-        /*
-                 * alocação das colunas de forma onde o primeiro endereço de "aux" contenha o primeiro endereço referente ao
-                 * vetor de colunas da minha matriz.
-                 * A iteração que vem logo em seguida serve para ajustar os endereços de memoria de forma que fiquem sequenciais
-                */
-        /*
-            Alocação das colunas onde o primeiro endereço
-
-
-        */
+    if(aux != 0){       
 
         aux[0] = new Voxel*[nc*nl];
         if(aux[0]!=0){
