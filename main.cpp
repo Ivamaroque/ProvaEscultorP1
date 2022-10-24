@@ -14,7 +14,7 @@ int main()
     escultura.cutBox(1,4,1,4,1,4);
     escultura.putSphere(10,20,10,10);
     escultura.cutSphere(10,20,20,10);
-    escultura.putEllipsoid(10,20,30,5,4,5);
+    escultura.putEllipsoid(10,20,30,5,5,5);
     escultura.cutEllipsoid(10,20,30,2,4,5);
     escultura.writeOFF(TesteEsculptor);
 }

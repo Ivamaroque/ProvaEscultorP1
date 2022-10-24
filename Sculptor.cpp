@@ -3,10 +3,25 @@
 #include <Sculptor.h>
 using namespace std;
 Voxel*** alocaEspaco(int nc,int na, int nl){
+    /*
+        A função "alocaespaco" é responsável por alocar o espaço tridimensiona onde será feito a escultura 3D
+        Ou seja, irá fazer uma alocação de uma matriz, cada elemento dessa matriz irá receber a "altura" do espaço
+        ou seja, de 0 a N onde será possível inserir voxels
+    */
     int i,j;
     Voxel ***aux;
     aux = new Voxel**[nl];
     if(aux != 0){
+        /*
+                 * alocação das colunas de forma onde o primeiro endereço de "aux" contenha o primeiro endereço referente ao
+                 * vetor de colunas da minha matriz.
+                 * A iteração que vem logo em seguida serve para ajustar os endereços de memoria de forma que fiquem sequenciais
+                */
+        /*
+            Alocação das colunas onde o primeiro endereço
+
+
+        */
 
         aux[0] = new Voxel*[nc*nl];
         if(aux[0]!=0){
@@ -28,8 +43,6 @@ Voxel*** alocaEspaco(int nc,int na, int nl){
             aux[i][j] = new Voxel[na];
             if(aux[i][j]==0){
                 j--;
-            }
-            else{
             }
         }
     }
@@ -63,7 +76,7 @@ bool validaEsfera(int z,int x,int y,int a,int b,int c, int raio){
     }
 }
 bool validaElipse(int z,int x,int y,int xcent, int ycent,int zcent,int a,int b,int c){
-    int aux = (x-xcent)*(x-xcent)/(a*a) + (y-ycent)*(y-ycent)/(b*b) + (z-zcent)*(z-zcent)/(c*c);
+    int aux = (((x-xcent)/(float)a)*((x-xcent)/(float)a)) + (((y-ycent)/(float)b)*((y-ycent)/(float)b)) +(((z-zcent)/(float)c)*((z-zcent)/(float)c));
     if(aux <= 1)
         return true;
     else
