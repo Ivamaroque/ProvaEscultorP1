@@ -66,7 +66,7 @@ bool validaEsfera(int z,int x,int y,int a,int b,int c, int raio){
     }
 }
 bool validaElipse(int z,int x,int y,int xcent, int ycent,int zcent,int a,int b,int c){
-    int aux = (((x-xcent)/(float)a)*((x-xcent)/(float)a)) + (((y-ycent)/(float)b)*((y-ycent)/(float)b)) +(((z-zcent)/(float)c)*((z-zcent)/(float)c));
+    int aux = (x-xcent)*(x-xcent)/(float)(a*a) + (y-ycent)*(y-ycent)/(float)(b*b) + (z-zcent)*(z-zcent)/(float)(c*c);
     if(aux <= 1)
         return true;
     else
