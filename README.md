@@ -1,0 +1,7 @@
+# ProvaEscultorP1
+
+Alunos:
+
+IVAMAR DANTAS ROQUE
+
+MARIA CLARA MOURA DE FREITAS
