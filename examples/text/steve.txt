@@ -1,0 +1,5 @@
+dim 100 100 100
+putBox 3  6  0  23  4  11
+putBox 1  8  24  31  4  11
+putBox 3  6  11  23  0  3
+putBox 3  6  11  23  11  15
