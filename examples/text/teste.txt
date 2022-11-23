@@ -1,0 +1,8 @@
+dim 100 100 100
+putVoxel  0 0 0
+putBox  2 6 2 6 2 6
+cutBox  1 4 1 4 1 4
+putSphere  10 20 10 10
+cutSphere  10 20 20 10
+putEllipsoid  10 20 30 5 3 5
+cutEllipsoid  10 15 30 5 3 5
